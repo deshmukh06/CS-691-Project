@@ -16,7 +16,7 @@ This repository contains documentation and code for UnitedTune.
 - Documents: This folder contains all necessary buisness case documents for the project
 - Code and Theme: This folder contains code and theme for the project
 
-## Project Objective:
+# Project Objective:
 - Develop a secure, convenient, and user-friendly web-based platform for music-band rental services available to consumers.
 - Connect customers and musicians directly to rent music related services.
 - Transform the manual process of renting a band/musician to an online, computerized, and 24x7 available system.

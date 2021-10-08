@@ -30,7 +30,7 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                 </li>
 
                                 <li id="menu-item-353" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-353">
-                                    <a href="#"><span>About</span></a>
+                                    <a href="about.html"><span>About</span></a>
 
                                     <ul class="sub-menu">
                                         <li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354">

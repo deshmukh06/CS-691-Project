@@ -154,7 +154,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
         $service->loadAuthenticator('Authentication.Form', [
                 'fields' => $fields,
                 'loginUrl' => Router::connect('/', ['controller' => 'Users', 'action' => 'login', 'plugin' => null,'prefix' => null])
-            ]);
+                ]);
 
         $resolver = [
             'className' => 'Authentication.Orm',

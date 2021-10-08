@@ -18,10 +18,23 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <h5>Hello, <?= ucfirst($userDetails->first_name) ?></h5>
-                                                <p>Welcome to UnitedTune!</p>
-
-                                                <p>On your right side you have different sections that can show your account details. Hover over your mouse on each section and click open the desired section to update</p>
+                                                <h5>Hello <?= ucfirst($userDetails->first_name) ?>, these are your account details</h5> 
+                                                <p><b>First Name: </b><?= ucfirst($userDetails->first_name) ?></p>
+                                                <p><b>Last Name: </b><?= ucfirst($userDetails->last_name) ?></p>
+                                                <p><b>Email: </b><?= ($userDetails->email) ?></p>
+                                                <p><b>Address: </b><?= ($userDetails->address) ?></p>
+                                                <input type="Submit" value="Update Account details" onclick="window.location.href='http://localhost/code/manage-details/edit';">
+                                                <input type="Submit" value="Delete" onclick="ConfirmDelete();">
+                                                <script>
+                                                function ConfirmDelete()
+                                                    {
+                                                        alert("Are you sure you want to delete this account?");
+                                                        window.location.href = "http://localhost/code/users/logout"
+                                                        
+                                                    }
+                                                    
+                                                </script>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -39,9 +52,8 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                     <h5 class="widget_title">User Account</h5>
 
                     <?php if ($userDetails->role_id === CUSTOMER_ROLE_ID) { ?>
-
                         <ul class="product-categories">
-                            <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
+                        <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_booking_history']) ?>">View Booking History</a></li>
                             <li class="cat-item cat-item-39"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'changepass']) ?>">Change Password</a></li>
@@ -52,8 +64,7 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
 
                         <ul class="product-categories">
                             <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
-                            <li class="cat-item cat-item-36"><a href="#">View Booking Requests</a></li>
+                           <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_booking_history']) ?>">View Booking History</a></li>
                             <li class="cat-item cat-item-39"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'changepass']) ?>">Change Password</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Users', 'action' => 'logout']) ?>">Logout</a></li>

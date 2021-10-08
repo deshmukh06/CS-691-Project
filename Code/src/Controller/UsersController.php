@@ -2,7 +2,7 @@
 declare(strict_types=1);
 
 namespace App\Controller;
-
+use Cake\ORM\TableRegistry;
 /**
  * Users Controller
  *
@@ -106,5 +106,7 @@ class UsersController extends AppController
             $this->session->delete('SESS_USER_PERMISSIONS');
             return $this->redirect(['controller' => 'Users', 'action' => 'login', $roleId]);
         }
-    }
+    }  
+    
+   
 }

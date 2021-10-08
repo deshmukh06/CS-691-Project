@@ -39,8 +39,8 @@ class AppController extends Controller
 
         if (in_array($controllerName, ['Login']) && in_array($actionName, ['index'])) {
             $this->Authentication->addUnauthenticatedActions(['index']);
-        } else if (in_array($controllerName, ['Home', 'Users']) && in_array($actionName, ['index', 'login', 'register'])) {
-            $this->Authentication->addUnauthenticatedActions(['index', 'login', 'register']);
+        } else if (in_array($controllerName, ['Home', 'Users','ManageAccount']) && in_array($actionName, ['index', 'login', 'register','viewdetails','editaddress'])) {
+            $this->Authentication->addUnauthenticatedActions(['index', 'login', 'register','viewdetails','editaddress']);
         } else {
 
         }

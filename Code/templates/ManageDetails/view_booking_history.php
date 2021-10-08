@@ -18,10 +18,11 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <h5>Hello, <?= ucfirst($userDetails->first_name) ?></h5>
-                                                <p>Welcome to UnitedTune!</p>
+                                                <h5>Hello <?= ucfirst($userDetails->first_name) ?>, these are your previous booking history</h5>
+                
 
-                                                <p>On your right side you have different sections that can show your account details. Hover over your mouse on each section and click open the desired section to update</p>
+                                                                   
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -36,12 +37,12 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
         <div class="sidebar sidebar_left widget_area" role="complementary" style="margin-top: 150px !important; margin-bottom: 150px !important;">
             <div class="sidebar_inner">
                 <aside id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
-                    <h5 class="widget_title">User Account</h5>
+                    <h5 class="widget_title">Booking History</h5>
 
                     <?php if ($userDetails->role_id === CUSTOMER_ROLE_ID) { ?>
-
                         <ul class="product-categories">
-                            <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
+                        <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
+                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'editaddress']) ?>">Manage Address</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_booking_history']) ?>">View Booking History</a></li>
                             <li class="cat-item cat-item-39"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'changepass']) ?>">Change Password</a></li>
@@ -52,8 +53,8 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
 
                         <ul class="product-categories">
                             <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
+                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'editaddress']) ?>">Manage Address</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
-                            <li class="cat-item cat-item-36"><a href="#">View Booking Requests</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_booking_history']) ?>">View Booking History</a></li>
                             <li class="cat-item cat-item-39"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'changepass']) ?>">Change Password</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Users', 'action' => 'logout']) ?>">Logout</a></li>

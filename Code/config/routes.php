@@ -51,7 +51,7 @@ $routes->scope('/', function (RouteBuilder $builder) {
      * to use (in this case, templates/Pages/home.php)...
      */
     $builder->connect('/', ['controller' => 'Home', 'action' => 'index']);
-
+    
     /*
      * Connect catchall routes for all controllers.
      *
@@ -83,3 +83,4 @@ $routes->scope('/', function (RouteBuilder $builder) {
  * });
  * ```
  */
+ 

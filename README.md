@@ -7,7 +7,7 @@ This repository contains documentation and code for UnitedTune.
 - Project Manager: John Brilhart
 - Product Owner: Jay Patel
 - Lead Business Analyst: Yashwanth Varre, Ge Ou
-- Lead Developer: Hetali Chavda
+- Lead Developer: Hetali Chavda-Former & Revati Deshmukh-Current
 - DBA: Revati Deshmukh
 - QA Analyst: Suraj Suwal
 - Tester: Soyeon Ju 

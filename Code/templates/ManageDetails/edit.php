@@ -23,14 +23,26 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                                 <br>Last Name: <input type="text" name="last_name"></br>
                                                 <br>Address: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="address"></br>
                                                 <br>E-mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email"></br>
-                                                <input type="Submit" value="Update Account details" onclick="Success();">
+                                                <br><input type="Submit" value="Update Account details" onclick="Success();">
                                                 <script>
                                                     function Success(){
                                                         alert("Updates saved successfully!");
                                                         window.location.href = "http://localhost/code/manage-details/updated-view-details"
+                                                    
                                                     }
+
                                                 </script>
                                                 &nbsp; <input type="Submit" value="Cancel" onclick= "window.location.href='http://localhost/code/manage-details/view-details';"></br></table>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+
                                             </div>
                                             </div>
                                         </div>
@@ -52,8 +64,6 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
 
                         <ul class="product-categories">
                             <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_booking_history']) ?>">View Booking History</a></li>
                             <li class="cat-item cat-item-39"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'changepass']) ?>">Change Password</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Users', 'action' => 'logout']) ?>">Logout</a></li>
                         </ul>
@@ -62,8 +72,6 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
 
                         <ul class="product-categories">
                             <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_booking_history']) ?>">View Booking History</a></li>
                             <li class="cat-item cat-item-39"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'changepass']) ?>">Change Password</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Users', 'action' => 'logout']) ?>">Logout</a></li>
                         </ul>

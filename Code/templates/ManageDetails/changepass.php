@@ -18,8 +18,35 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <h5>Hello <?= ucfirst($userDetails->first_name) ?>, these are your password details</h5>                                                                   
+                                                <h5>Verify your identity first to change your password</h5>
+                                                Please enter your email address to verify your identity                                                                   
+                                                <br><input type="email" size=50>
+                                                <br>
+                                                <br>Security question: Whats your mother's maiden name:
+                                                <br><input type="email" size=50></br>
+                                                <br><input type="Submit" value="verify" onclick="Success();">
+                                                <script>
+                                                     function Success(){
+                                                        alert("Verification otp sent to your registered email address!");
+                                                        
+                                                        }
+                                                </script>
+                                                <br>
+                                                <br>Please enter OTP sent your email address:
+                                                <br><input type="number" size=40 name="otp">
+                                                <br>
+                                                <br><input type="Submit" value="Verify OTP" onclick= "window.location.href='http://localhost/code/manage-details/editpass';">
+                                                <br>
+                                                <br>
+                                                <br>
                                                 
+
+
+
+
+
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -39,8 +66,6 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                     <?php if ($userDetails->role_id === CUSTOMER_ROLE_ID) { ?>
                         <ul class="product-categories">
                         <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_booking_history']) ?>">View Booking History</a></li>
                             <li class="cat-item cat-item-39"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'changepass']) ?>">Change Password</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Users', 'action' => 'logout']) ?>">Logout</a></li>
                         </ul>
@@ -49,9 +74,7 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
 
                         <ul class="product-categories">
                             <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_booking_history']) ?>">View Booking History</a></li>
-                            <li class="cat-item cat-item-39"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'changepass']) ?>">Change Password</a></li>
+                           <li class="cat-item cat-item-39"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'changepass']) ?>">Change Password</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Users', 'action' => 'logout']) ?>">Logout</a></li>
                         </ul>
 

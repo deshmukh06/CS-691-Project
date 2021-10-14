@@ -14,32 +14,48 @@ class ManageDetailsController extends AppController
 
     public function viewDetails() {
     	$this->render('/ManageDetails/view_details', 'view_details');
-    	
+    
 
 
     }
 
     public function edit(){
     	$this->render('/ManageDetails/edit', 'edit');
-    	if($this->request->is('post')){
-        $firstname = $this->request->data('first_name');
-        $lastname= $this->request->data('last_name');
-        $email= $this->request->data('email');
-        $address= $this->request->data('address');}
+       
 
 
     }
 
     public function delete(){
+            $users_table = TableRegistry::get('users');
+            $users = $users_table->get($id);
+            $users_table->delete($users);
+            echo "User deleted successfully.";
+            $this->setAction('index');
     		$this->Authentication->logout();
             $this->session = $this->request->getSession();
             $this->session->delete('SESS_USER');
             $this->session->delete('SESS_USER_PERMISSIONS');
             return $this->redirect(['controller' => 'Home', 'action' => 'index']);
+            
      }
-     public function changepass(){
+     
+
+
+
+    public function changepass(){
      	$this->render('/ManageDetails/changepass', 'changepass');
+          
+
      }
+     
+
+     public function editpass(){
+        $this->render('/ManageDetails/editpass', 'editpass');
+          
+
+
+    }
 
      public function editaddress(){
      	$this->render('/ManageDetails/editaddress', 'editaddress');
@@ -53,6 +69,15 @@ class ManageDetailsController extends AppController
      public function viewBookingHistory(){
      	$this->render('/ManageDetails/view_booking_history', 'view_booking_history');
      }
+
+     public function upbookings(){
+        $this->render('/ManageDetails/upbookings', 'upbookings');
+     }
+
+      public function upbookingsup(){
+        $this->render('/ManageDetails/upbookingsup', 'upbookingsup');
+     }
+
 
      public function editadd(){
      	$this->render('/ManageDetails/editadd', 'editadd');

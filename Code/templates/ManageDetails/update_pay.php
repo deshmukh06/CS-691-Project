@@ -18,10 +18,10 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <table><br>Card Number: <input type="text" size=40 name="card_number"></br>
-                                                <br>Expiry Date: &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size=10 name="exp_date">
-                                                &nbsp;&nbsp;&nbsp;&nbsp; CVV: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size=10 name="cvv"></br>
-                                                <br>Name on Card:<input type="text" size=40 name="name_on_card"></br>
+                                                <table><br>Card Number: <input type="number" size=40 name="card_number"></br>
+                                                <br>CVV:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" size=10 name="cvv"></br>
+                                                <br>Expiry Date: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="Date" size=10 name="exp_date"></table></br>
+                                                Name on Card:<input type="text" size=40 name="name_on_card"></br>
                                                 <br><input type="Submit" value="Save" style="margin-left: 18%" onclick="Success();">
                                                 <script>
                                                     function Success(){

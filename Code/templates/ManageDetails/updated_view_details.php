@@ -32,6 +32,7 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                                         alert("Are you sure you want to delete this account?");
                                                         window.location.href = "http://localhost/code/users/logout"
                                                         
+                                                        
                                                     }
                                                     
                                                 </script>

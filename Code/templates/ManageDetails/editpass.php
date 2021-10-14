@@ -18,32 +18,30 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <h5>Hello <?= ucfirst($userDetails->first_name) ?>, these are your account details</h5> 
-                                                <p><b>First Name: </b><?= ucfirst($userDetails->first_name) ?></p>
-                                                <p><b>Last Name: </b><?= ucfirst($userDetails->last_name) ?></p>
-                                                <p><b>Email: </b><?= ($userDetails->email) ?></p>
-                                                <p><b>Address: </b><?= ($userDetails->address) ?></p>
-                                                <input type="Submit" value="Update Account details" onclick="window.location.href='http://localhost/code/manage-details/edit';">
-                                                <input type="Submit" value="Delete" onclick="ConfirmDelete();">
+                                             
+                                             <br>Enter your new password:
+                                             <br><input type="text" size=60>
+                                             <br>
+                                             <br>Confirm password:
+                                             <br><input type="text" size=60>   
+                                             <br>
+                                             <br><input type="Submit" value="Save" onclick="Success();">
                                                 <script>
-                                                function ConfirmDelete()
-                                                    {
-                                                        alert("Are you sure you want to delete this account?");
-                                                        window.location.href = "http://localhost/code/users/logout"
-                                                        
+                                                    function Success(){
+                                                        alert("Password updated successfully!");
+                                                        window.location.href = "http://localhost/code/manage-details/view_details"
                                                     }
-                                                    
-                                                </script>
+                                                </script>   
+                                                
                                                 <br>
                                                 <br>
                                                 <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
-                                                <br>
+
+
+
+
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -58,7 +56,7 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
         <div class="sidebar sidebar_left widget_area" role="complementary" style="margin-top: 150px !important; margin-bottom: 150px !important;">
             <div class="sidebar_inner">
                 <aside id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
-                    <h5 class="widget_title">User Account</h5>
+                    <h5 class="widget_title">Change Password</h5>
 
                     <?php if ($userDetails->role_id === CUSTOMER_ROLE_ID) { ?>
                         <ul class="product-categories">

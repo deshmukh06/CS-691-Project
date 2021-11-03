@@ -26,29 +26,9 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                         <nav class="sc_layouts_menu sc_layouts_menu_default menu_hover_fade hide_on_mobile inited" id="sc_layouts_menu_1409259290" data-animation-in="fadeInUpSmall" data-animation-out="fadeOutDownSmall"		>
                             <ul id="menu-main-menu" class="sc_layouts_menu_nav">
                                 <li id="menu-item-149" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-149">
-                                    <a href="<?= $this->Url->build(['controller' => 'Home', 'action' => 'index']) ?>"><span>Home</span></a>
-                                </li>
-
-                                <li id="menu-item-353" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-353">
-                                    <a href="about.html"><span>About</span></a>
-
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354">
-                                            <a href="#"><span>Our Team</span></a>
-                                        </li>
-                                        <li id="menu-item-355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-355">
-                                            <a href="#"><span>Our Features</span></a>
-                                        </li>
+                                  
                                     </ul>
-                                </li>
-
-                                <li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280">
-                                    <a href="<?= $this->Url->build(['controller' => 'Users', 'action' => 'login',md5(MUSICIAN_ROLE_ID)]) ?>"><span>Join as a Pro</span></a>
-                                </li>
-
-                                <li >
-                                    <a href="<?= $this->Url->build(['controller' => 'ContactUs', 'action' => 'contactUs']) ?>"><span>Contact Us</span></a>
-                                </li>
+                               
                             </ul>
                         </nav><!-- /.sc_layouts_menu -->
 
@@ -64,8 +44,7 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                             <?php
                             if (isset($userDetails->first_name) && !empty($userDetails->first_name)) { ?>
                                 <span class="sc_button_icon">
-                                        <span class="icon-icon_user"> Welcome, <?= $userDetails->first_name ?></span>
-                                    </span>
+                                       
                             <?php    } else { ?>
                                 <span class="sc_button_icon">
                                     <span class="icon-icon_user"></span>

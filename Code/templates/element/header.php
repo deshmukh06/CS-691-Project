@@ -48,7 +48,7 @@
                                 </li>
 
                                 <li id="menu-item-175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-175">
-                                    <a href="#"><span>Contact Us</span></a>
+                                    <a href="<?= $this->Url->Build(['controller' => 'ContactUs', 'action' => 'contactUs']) ?>"><span>Contact Us</span></a>
                                 </li>
                             </ul>
                         </nav><!-- /.sc_layouts_menu -->

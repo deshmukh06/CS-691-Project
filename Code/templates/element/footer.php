@@ -86,7 +86,7 @@
                                                             constantly looking
                                                         </p>
                                                         <p style="text-align: center;">
-                                                            <a class="icon-right" href="contact-us.html">SEND US A MESSAGE</a>
+                                                            <a  href="<?= $this->Url->build(['controller' => 'ContactUs', 'action' => 'contactUs']) ?>">SEND US A MESSAGE</a>
                                                         </p>
                                                     </div>
                                                 </div>

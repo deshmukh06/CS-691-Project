@@ -1,6 +1,9 @@
+                                              <!DOCTYPE html>
+<html>
 <?php
 
 $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
+// app/View/Posts/view.ctp
 ?>
 
 <div class="page_content_wrap scheme_default">
@@ -16,14 +19,28 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                             <div class="wpb_column vc_column_container vc_col-sm-12 sc_layouts_column_icons_position_left">
                                 <div class="vc_column-inner vc_custom_1477912247150">
                                     <div class="wpb_wrapper">
-                                        <div class="wpb_text_column wpb_content_element ">
-                                            <div class="wpb_wrapper">
-                                                <h5>Hello, <?= ucfirst($userDetails->first_name) ?></h5>
-                                                <p>Welcome to UnitedTune!</p>
+                                        <h5>Messages For You..</h5>
+                                            <table >
+                                                <tr>
+                                                <th style=" border: 1px solid black;">From</th>
+                                                <th style="width:150%; border: 1px solid black; ">Messages</th>
 
-                                                <p>On your right side you have different sections that can show your account details. Hover over your mouse on each section and click open the desired section to update</p>
-                                            </div>
-                                        </div>
+                                                
+                                                <tr>
+                                                    <tr>
+                                                        <td style=" border: 1px solid black;">Customer Support</td>
+                                                        <td style=" border: 1px solid black; text-align:justify;">
+                                                            Our valued customer! Check your recent booking. There is an update on your booking request. Your musician has accepted your booking. Go ahead and complete the payment in order to confirm your booking.
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </table>
+                                               
+
+
+                                                
+
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -32,15 +49,14 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                 </article>
             </div>
         </div>
-
         <div class="sidebar sidebar_left widget_area" role="complementary" style="margin-top: 150px !important; margin-bottom: 150px !important;">
             <div class="sidebar_inner">
-                <aside id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
+                <div id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
                     <h5 class="widget_title">User Account</h5>
 
                     <?php if ($userDetails->role_id === CUSTOMER_ROLE_ID) { ?>
 
-                        <ul class="product-categories">
+                         <ul class="product-categories">
                             <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_details']) ?>">Manage Account Details</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ContactUs', 'action' => 'search']) ?>">Search for services</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
@@ -64,8 +80,14 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                         </ul>
 
                     <?php } else { } ?>
-                </aside>
+                </div>
             </div>
         </div>
     </div>
 </div>
+ <body>
+
+                                                
+                                                  
+                                                 
+ </html>

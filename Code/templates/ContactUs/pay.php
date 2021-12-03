@@ -22,6 +22,7 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                               <p>Service Charge <span class="price">$1500</span></p>
                                               <p>United Tunes Comission <span class="price">$150</span></p>
                                               <p>Taxes <span class="price">$18</span></p>
+                                              <p><input type="text" size=30 name="code" placeholder="Enter promocode">&nbsp;&nbsp;<input type="Submit" value="Apply Code" onclick="window.location.href = 'http://localhost/code/contactUs/newpay';">
                                               <hr>
                                               Total <span class="price" style="color:black"><b>$1668</b></span>
                                               <style>

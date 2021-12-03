@@ -49,6 +49,9 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                 <li >
                                     <a href="<?= $this->Url->build(['controller' => 'ContactUs', 'action' => 'contactUs']) ?>"><span>Contact Us</span></a>
                                 </li>
+                                 <li >
+                                    <a href="<?= $this->Url->build(['controller' => 'Customersupportportal', 'action' => 'messages']) ?>"><span>Messages</span></a>
+                                </li>
                             </ul>
                         </nav><!-- /.sc_layouts_menu -->
 

@@ -19,112 +19,36 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <table> 
-												<h3>Customer Booking Summary</h3> 
-												<tr> 
-													<th>User Id</th>
-													<th>Customer Name</th> 
-													<th>Booking Id</th>
-													<th>Band Booked</th>
-													<th>Booking Date</th> 
-													<th>Total Revenue</th>
-													<th>Commission earned</th> 
-													<th>Status</th>
-												</tr> 
-												<tr> 
-													<td rowspan="3">110</td> 
-													<td rowspan="3">Kimeth Williams</td> 
-													<td>A453</td>
-													<td>Fransisco Rockers</td>
-													<td>October 12 2021</td> 
-													<td>$1200</td>
-													<td>$150</td>
-													<td>Booking Completed</td> 
-												</tr> 
-												<tr> 
-													 
-													<td>A546</td>
-													<td>Highlanders</td>
-													<td>July 20 2021</td> 
-													<td>$2100</td>
-													<td>$350</td>
-													<td>Booking Completed</td>
-												</tr> 
-													<tr> 
-														<td>E593</td>
-														<td>Crocket Nights</td>
-														<td>Feb 08 2021</td> 
-														<td>$2900</td>
-														<td>$850</td>
-														<td>Cancelled</td>
-													</tr> 
-													<tr> 
-														<td rowspan="2">107</td> 
-														<td rowspan="2">Rose Tylor</td> 
-														<td>U765</td>
-														<td>Blinding Stage</td>
-														<td>October 21 2021</td> 
-														<td>$1500</td>
-														<td>$200</td> 
-														<td>Booking Completed</td>
-													</tr>
-													<tr>
-														<td>E593</td>
-														<td>Tune Wings </td>
-														<td>Jan 25 2021</td> 
-														<td>$2900</td>
-														<td>$250</td>
-														<td>Booking Completed</td>
-													</tr>
-													<tr> 
-														<td rowspan="5">116</td> 
-														<td rowspan="5">Tom Jose</td> 
-														<td>G265</td>
-														<td>Fantastic Four</td>
-														<td>April 19 2021</td> 
-														<td>$5500</td>
-														<td>$500</td> 
-														<td>Booking Completed</td>
-													</tr>
-													<tr> 
-														<td>D432</td>
-														<td>Fransisco Rockers</td>
-														<td>June 20 2021</td> 
-														<td>$4500</td>
-														<td>$300</td> 
-														<td>Booking Completed</td>
-													</tr>
-													<tr> 
-														<td>A132</td>
-														<td>Highlanders</td>
-														<td>July 25 2021</td> 
-														<td>$1500</td>
-														<td>$100</td> 
-														<td>Booking Completed</td>
-													</tr>
- 													<tr> 
-														<td>B332</td>
-														<td>Tunes of Peace</td>
-														<td>August 25 2021</td> 
-														<td>$3500</td>
-														<td>$300</td> 
-														<td>Booking Completed</td>
-													</tr>
-													<tr> 
-														<td>R332</td>
-														<td>Heavenly Melodies</td>
-														<td>September 16 2021</td> 
-														<td>$2500</td>
-														<td>$200</td> 
-														<td>Booking Completed</td>
-													</tr>
-												</table>
+                                                <center><h5>Booking Form</h5></center>
 
-												</center>
-												<br>
-												<br>
-												<br>
-                                            </div>
+                                                <br><b>Customer Name: <input type="text" size= 80 name="company_name" required></br>
+                                                 <p style="color:red;">Error:Empty input!</p>   
+                                                <br>Music Company: &nbsp;&nbsp;&nbsp;<input type="text" size=80 name="services"></br>
+                                                <p style="color:red;">Error:Empty input!</p>
+                                                <br>Service needed <input type="text" size= 80 name="company_name"></br>
+                                                <p style="color:red;">Error:Empty input!</p>
+
+                                               <br>
+                                                <br>Customer Contact No:&nbsp;&nbsp;<input type="number"  name="contact"></br>
+                                                <p style="color:red;">Error:Empty input!</p>                                       
+                                                <br>Event Location <input type="text" size= 80 name="company_name"></br><p style="color:red;">Error:Empty input!</p>
+                                                <br><input type="date" size=80 ></br> <p style="color:red;">Error:Empty input!</p>                                              
+                                                <br>Booking Time from<input type="Time" size= 80 name="company_name">to<input type="Time" size= 80 name="company_name"></br>
+                                                <p style="color:red;">Error:Empty input!</p>
+                                                <br><input type="Submit" value="Save" onclick="Success();">
+                                               <script>
+
+                                                    function Success(){
+                                                        alert("Booking has been created successfully!");
+                                                        window.location.href = "http://localhost/code/admin/upmanualbookings"
+                                                    
+                                                    }
+
+                                                </script>
+                                                &nbsp; <input type="Submit" value="Cancel" onclick= "window.location.href='http://localhost/code/admin/manualbookings';"></br>
+                                                        <br></br>
+                                                        <br></br>
+                                         </div>
                                         </div>
                                     </div>
                                 </div>
@@ -134,11 +58,10 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                 </article>
             </div>
         </div>
-
         <div class="sidebar sidebar_left widget_area" role="complementary" style="margin-top: 150px !important; margin-bottom: 150px !important;">
             <div class="sidebar_inner">
                 <div id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
-                    <h5 class="widget_title">Customer Booking Summary</h5>
+                    <h5 class="widget_title">Dashboard</h5>
 
                     <?php if ($userDetails->role_id === CUSTOMER_ROLE_ID) { ?>
 
@@ -183,8 +106,3 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
         </div>
     </div>
 </div>
-
-
-
-
-

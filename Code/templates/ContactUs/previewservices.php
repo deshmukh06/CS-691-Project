@@ -18,16 +18,21 @@
                     <img src="https://media.istockphoto.com/photos/rock-band-playing-at-a-nightclub-picture-id1129172065?b=1&k=20&m=1129172065&s=170667a&w=0&h=v-Pod4G29_XGsVESvkUCGfTMH2R_RfLo5CNss69SOvA=" alt="tomato">
                 </div>
                 <div class="vi_right">
-                    <p class="title">Fransisco Rockers</p>
+                    <table>
+                    <tr><p class="title">Fransisco Rockers</p>
                     <p class="content">
                     <br><b>Services: </b>Rock band, live music for parties or restaurants and DJ services </br>
+                    <br><b>Music Genre:</b> Rock</br>
                     <br><b>Musicians:</b>Kelly Morgan, Brandy Clovey, Stew gardner, Shakes Mill</br>
                     <br><b>Email Address:</b>fransiscorockers@yahoo.com</br>
                     <br><b>Contact Number:</b>8765436785</br>
                     <br><b>Amount:</b>Starting from $1500</br>
-                    <div class="btn">Contact this Band</div>
+                    <div class="btn">Contact this Band</div><tr>
+                    
                 </div>
             </div>
+                  
+                 </table>
            <input type="Submit" value="Go Back" onclick="Success();">
                                                 <script>
                                                     function Success(){

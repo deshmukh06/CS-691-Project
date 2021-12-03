@@ -1,6 +1,7 @@
 <?php
 
 $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
+// app/View/Posts/view.ctp
 ?>
 
 <div class="page_content_wrap scheme_default">
@@ -18,11 +19,28 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <h5>Hello, <?= ucfirst($userDetails->first_name) ?></h5>
-                                                <p>Welcome to UnitedTune!</p>
+                                                <center><h5>Booking Form</h5></center>
+                                                <br><b>Customer Name: <input type="text" size= 80 name="company_name" required></br>
+                                                <br>Service needed <input type="text" size= 80 name="company_name"></br>
+                                               
+                                                <br>Customer Contact No:&nbsp;&nbsp;<input type="number"  name="contact"></br>
+                                                                                       
+                                                <br>Event Location <input type="text" size= 80 name="company_name"></br>
+                                                <br><input type="date" size=80 ></br>                                               
+                                                <br>Booking Time from<input type="Time" size= 80 name="company_name">to<input type="Time" size= 80 name="company_name"></br>
+                                                <br><input type="Submit" value="Send Request" onclick="Success();">
+                                                <script>
+                                                    function Success(){
+                                                        alert("Booking request sent successfully! You will be notified to pay for the services once the band accepts your booking request");
+                                                        window.location.href = "http://localhost/code/users/account/6"
+                                                    
+                                                    }
 
-                                                <p>On your right side you have different sections that can show your account details. Hover over your mouse on each section and click open the desired section to update</p>
-                                            </div>
+                                                </script>
+                                                &nbsp; <input type="Submit" value="Cancel" onclick= "window.location.href='http://localhost/code/contactUs/contactband';"></br>
+                                                        <br></br>
+                                                        <br></br>
+                                         </div>
                                         </div>
                                     </div>
                                 </div>
@@ -32,11 +50,10 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                 </article>
             </div>
         </div>
-
         <div class="sidebar sidebar_left widget_area" role="complementary" style="margin-top: 150px !important; margin-bottom: 150px !important;">
             <div class="sidebar_inner">
-                <aside id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
-                    <h5 class="widget_title">User Account</h5>
+                <div id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
+                    <h5 class="widget_title">Dashboard</h5>
 
                     <?php if ($userDetails->role_id === CUSTOMER_ROLE_ID) { ?>
 
@@ -57,14 +74,14 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'payment']) ?>">Manage Payment Method</a></li>
                             
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ContactUs', 'action' => 'addservices']) ?>">Add services</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ContactUs', 'action' => 'bookingrequest']) ?>">Accept/Decline Booking Requests</a></li>
 
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'view_booking_history']) ?>">View Booking History</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Users', 'action' => 'logout']) ?>">Logout</a></li>
                         </ul>
 
+
                     <?php } else { } ?>
-                </aside>
+                </div>
             </div>
         </div>
     </div>

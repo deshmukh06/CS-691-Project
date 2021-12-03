@@ -19,7 +19,43 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
+                                                <h5><a href="http://localhost/code/admin/newpromocode">+Generate new promocode</a></h5>
                                                 
+                                                <table>
+                                                    <th>Promocode_id</th>
+                                                    <th>Promocode</th>
+                                                    <th>Status</th>
+                                                    <th>Actions</th>
+                                                    <th></th>
+
+                                                    <tr>
+                                                        <td>001</td>
+                                                        <td>AF6TJ38K</td>
+                                                        <td>Inactive</td>
+                                                        <td><button type="Button" style="height:20px;width:10px text-align:center;" onclick="Success();">Activate</button></td>
+                                                        <script>
+                                                            function Success(){
+                                                                alert("Promocode is activated!");
+                                                            }
+                                                        </script>
+                                                        <td><button type="Button" style="height:20px;width:10px text-align:center;">Deactivate</button></td>
+
+
+                                                    </tr>
+                                                     <td>002</td>
+                                                        <td>JH65ESD7</td>
+                                                        <td>Inactive</td>
+                                                        <td><button type="Button" style="height:20px;width:10px text-align:center;" onclick="Success();">Activate</button></td>
+                                                        <script>
+                                                            function Success(){
+                                                                alert("Promocode is activated!");
+                                                                window.location.href = 'http://localhost/code/admin/activepromocode';
+                                                            }
+                                                        </script>
+                                                        <td><button type="Button" style="height:20px;width:10px text-align:center;" onclick="window.location.href = 'http://localhost/code/admin/deletecustomers';">Deactivate</button></td>
+                                                    <tr>
+                                                    </tr>
+                                                </table>
                                          </div>
                                         </div>
                                     </div>
@@ -33,44 +69,28 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
         <div class="sidebar sidebar_left widget_area" role="complementary" style="margin-top: 150px !important; margin-bottom: 150px !important;">
             <div class="sidebar_inner">
                 <div id="woocommerce_product_categories-2" class="widget woocommerce widget_product_categories">
-                    <h5 class="widget_title">Dashboard</h5>
+                    <h5 class="widget_title">Customer Booking Summary</h5>
 
                     <?php if ($userDetails->role_id === CUSTOMER_ROLE_ID) { ?>
 
                         <ul class="product-categories">
-                           <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'dashboard']) ?>">Back To Dashboard</a></li>
                            <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'managecustomers']) ?>">Manage Customers</a></li>
                             <li class="cat-item cat-item-36"><a href="#">Manage Musicians</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'cussum']) ?>">View Customer Booking Summary</a></li>
 
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'mussum']) ?>">View Musicians Booking Summary</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'managegenre']) ?>">Manage Music Genre</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'generate_promocode']) ?>">Generate promocode</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'manualbookings']) ?>">Manage Manual Booking</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'declinebookings']) ?>">Decline/Cancel Bookings</a></li>
-
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'onlinebookings']) ?>">Manage Online Bookings</a></li>
-
-
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Users', 'action' => 'logout']) ?>">Logout</a></li>
                         </ul>
 
                     <?php } else if ($userDetails->role_id === MUSICIAN_ROLE_ID) { ?>
 
                         <ul class="product-categories">
-                            <li class="cat-item cat-item-38"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'dashboard']) ?>">Back To Dashboard</a></li>
                            <li class="cat-item cat-item-38"><a href="#">Manage Customers</a></li>
                             <li class="cat-item cat-item-36"><a href="#">Manage Musicians</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'cussum']) ?>">View Customer Booking Summary</a></li>
 
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'mussum']) ?>">View Musicians Booking Summary</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'managegenre']) ?>">Manage Music Genre</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'generate_promocode']) ?>">Generate Promo Code</a></li>
-
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'generate_promocode']) ?>">Manage Manual Booking</a></li>
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'ManageDetails', 'action' => 'upbookings']) ?>">Decline/Cancel Bookings</a></li>
-
-                            <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Admin', 'action' => 'generate_promocode']) ?>">Manage Online Bookings</a></li>
                             <li class="cat-item cat-item-36"><a href="<?= $this->Url->Build(['controller' => 'Users', 'action' => 'logout']) ?>">Logout</a></li>
                         </ul>
 

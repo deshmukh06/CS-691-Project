@@ -45,6 +45,8 @@
                         <span class="sc_button_text"><span class="sc_button_title">Join as a Customer</span></span><!-- /.sc_button_text -->
                     </a><!-- /.sc_button -->
                 </div><!-- /.sc_item_button -->
+                
+
 
                 <div class="vc_empty_space  vc_custom_1504879237801 height_large"   style="height: 32px">
                     <span class="vc_empty_space_inner"></span>

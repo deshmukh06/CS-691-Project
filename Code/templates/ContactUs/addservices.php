@@ -18,10 +18,27 @@ $userDetails = $this->getRequest()->getSession()->read('SESS_USER');
                                     <div class="wpb_wrapper">
                                         <div class="wpb_text_column wpb_content_element ">
                                             <div class="wpb_wrapper">
-                                                <table><br>Music Company: <input type="text" size= 100 name="company_name"></br>
-                                                <br>Services: &nbsp;&nbsp;&nbsp;<input type="text" size=100 name="services"></br>
-                                                <br>Musicians: <input type="text" size= 100 name="company_name"></br>
-                                                <br>Contact No:&nbsp;&nbsp;<input type="number" size=100 name="contact"></br>
+                                                <br><b>Music Company: <input type="text" size= 80 name="company_name"></br>
+                                                <br>Services: &nbsp;&nbsp;&nbsp;<input type="text" size=80 name="services"></br>
+                                                <br>Musicians: <input type="text" size= 80 name="company_name"></br>
+                                               <br>
+                                               <form>
+                                                Select genre: 
+                                                <br><input type="checkbox" id="pop" name="pop" value="pop">
+                                                  <label for="pop"> Pop</label><br>
+                                                  <input type="checkbox" id="rock" name="rock" value="rock">
+                                                  <label for="rock"> Rock</label><br>
+                                                  <input type="checkbox" id="Folk Music" name="Folk Music" value="Folk Music">
+                                                  <label for="Folk Music"> Folk Music</label><br>
+                                                  <input type="checkbox" id="Indie Music" name="Indie Music" value="Indie Music">
+                                                  <label for="Indie Music"> Indie Music</label><br>
+                                                  <input type="checkbox" id="Jazz" name="Jazz" value="Jazz">
+                                                  <label for="Jazz"> Jazz</label><br>
+                                                  <input type="checkbox" id="Classical Music" name="Jazz" value="Jazz">
+                                                  <label for="Jazz"> Classical Music</label>
+                                                    
+                                               </form>
+                                                         <br>Contact No:&nbsp;&nbsp;<input type="number"  name="contact"></br>
                                                 <br>E-mail: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email"></br>
                                                 <br>Price:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="price"></br>
                                                 <br>Upload Image of your Band: <input type="file" id="myFile" name="filename"></br>

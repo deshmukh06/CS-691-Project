@@ -16,9 +16,17 @@ use Gregwar\Captcha\CaptchaBuilder;
 		}    		
 
 		public function pay(){
+			
 		$this->render('/ContactUs/pay', 'pay');
 		}
-    
+		public function search(){
+			
+		$this->render('/ContactUs/search', 'search');
+		}
+    	public function newpay(){
+			
+		$this->render('/ContactUs/newpay', 'newpay');
+		}
 
 		public function services()
     	{
@@ -28,6 +36,7 @@ use Gregwar\Captcha\CaptchaBuilder;
 		public function addservices()
 		{
 			$this->render('/ContactUs/addservices', 'addservices'); 
+			
 		}
 
 		public function previewservices()
@@ -38,6 +47,35 @@ use Gregwar\Captcha\CaptchaBuilder;
 		public function thanks()
 		{
 			$this->render('/ContactUs/thanks', 'thanks'); 
+		}
+
+		public function contactband()
+		{
+			$this->render('/ContactUs/contactband', 'contactband'); 
+			
+		}
+
+		public function sendrequest()
+		{
+			$this->render('/ContactUs/sendrequest', 'sendrequest'); 
+			
+		}
+    	public function bookingrequest()
+		{
+			$this->render('/ContactUs/bookingrequest', 'bookingrequest'); 
+			
+		}
+
+		public function acceptedbookingrequest()
+		{
+			$this->render('/ContactUs/acceptedbookingrequest', 'acceptedbookingrequest'); 
+			
+		}
+
+		public function declinebooking()
+		{
+			$this->render('/ContactUs/declinebooking', 'declinebooking'); 
+			
 		}
     }
 
